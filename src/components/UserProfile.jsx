@@ -1,9 +1,12 @@
-export function UserProfile() {
+import PropTypes from 'prop-types';
+import { UserUsername } from "./UserUsername";
+
+export function UserProfile(props) {
     return (
         <div id="user-profile">
             <h2>User Profile</h2>
-            <p>Username: </p>
-            <p>E-Mail: </p>
+            <UserUsername username={props.username}/>
+            <b>Age: </b><span>{props.age}</span>
             <ul>
                 <li>
                     <span>Spam</span>
@@ -18,3 +21,8 @@ export function UserProfile() {
         </div>
     );
 }
+
+UserProfile.propTypes = {
+    username: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired
+};
