@@ -1,3 +1,4 @@
+import { Form } from "./components/Form";
 import { UserProfile } from "./components/UserProfile";
 
 export default function App() {
@@ -37,6 +38,7 @@ export default function App() {
                 ></UserProfile>
             );
         })}
+        <Form></Form>
     </div>
     );
 }
